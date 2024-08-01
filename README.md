@@ -55,11 +55,11 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
    
 10. **Run the configuration script with the name of the group which you have created in above step**
 
-   ./configure --with-command-group=nagiocmd
+        ./configure --with-command-group=nagioscmd
 
-   *Compile the nagios source code, run the below command*
+   Compile the nagios source code, run the below command
 
-    make all
+         make all
 
 11. **Install binaries, init script, sample config files and set permission on the external command directly**
 
