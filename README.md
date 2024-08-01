@@ -22,6 +22,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 3. **Create account information, you need to setup a Nagios user**
 
    adduser -m nagios
+   
    passwd nagios
 
   *Now it will ask to enter new password and provide any*
@@ -29,12 +30,15 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
    **Now to add group enter these commands**
 
    groupadd nagioscmd
+   
    usermod -a -G nagioscmd nagios
+   
    usermod -a -G nagioscmd apache
 
 4. **Download and Install Nagios Core and plugins, now create directories to store the downloaded files**
   
    mkdir ~/downloads
+   
    cd ~/downloads    
 
 6. **Download the source code tarballs of both nagios and the plugins**
@@ -46,9 +50,10 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 8. **Extract the nagios source code tarball and install**
 
    tar -zxvf nagios-4.4.6.tar.gz
+   
    cd nagios-4.4.6
    
-9. **Run the configuration script with the name of the group which you have created in above step**
+10. **Run the configuration script with the name of the group which you have created in above step**
 
    ./configure --with-command-group=nagiocmd
 
@@ -56,12 +61,16 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
     make all
 
-10. **Install binaries, init script, sample config files and set permission on the external command directly**
+11. **Install binaries, init script, sample config files and set permission on the external command directly**
 
    make all
+   
    make install
+   
    make install-init
+   
    make install-config
+   
    make install-commandmode
 
 11. **Configure the web interface**
