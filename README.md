@@ -5,7 +5,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
 - An Amazon Linux EC2 instance
 - SSH access to the instance
-- `sudo` privileges
+- sudo privileges
 - Ensure your EC2 instance’s security group allows inbound traffic on port 80 (HTTP)
 
 
@@ -13,15 +13,15 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
 1. **Update the System**
      
-    yum update -y
+    `yum update -y`
 
 2. **Install Prerequisite Software Install Apache, PHP, and other required libraries**
 
-    yum install httpd php gcc glibc glibc-common gd gd-devel -y
+    `yum install httpd php gcc glibc glibc-common gd gd-devel -y`
 
 3. **Create account information, you need to setup a Nagios user**
 
-    adduser -m nagios
+    `adduser -m nagios`
    
     passwd nagios
 
