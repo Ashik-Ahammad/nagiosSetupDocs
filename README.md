@@ -11,7 +11,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
 ## Installation Steps
 
-1. **Update the System**
+1. `**Update the System**`
      
    yum update -y
 
