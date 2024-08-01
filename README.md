@@ -40,14 +40,15 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 6. **Download the source code tarballs of both nagios and the plugins**
 
    wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.6.tar.gz
+   
    wget https://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz 
      
-7. **Extract the nagios source code tarball and install**
+8. **Extract the nagios source code tarball and install**
 
    tar -zxvf nagios-4.4.6.tar.gz
    cd nagios-4.4.6
    
-8. **Run the configuration script with the name of the group which you have created in above step**
+9. **Run the configuration script with the name of the group which you have created in above step**
 
    ./configure --with-command-group=nagiocmd
 
@@ -55,7 +56,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
     make all
 
-9. **Install binaries, init script, sample config files and set permission on the external command directly**
+10. **Install binaries, init script, sample config files and set permission on the external command directly**
 
    make all
    make install
@@ -63,7 +64,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
    make install-config
    make install-commandmode
 
-10. **Configure the web interface**
+11. **Configure the web interface**
 
    make install-webconf
   
