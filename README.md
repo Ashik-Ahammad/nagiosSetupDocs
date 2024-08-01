@@ -11,71 +11,71 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
 ## Installation Steps
 
-1. `**Update the System**`
+1. **Update the System**
      
-   yum update -y
+    yum update -y
 
 2. **Install Prerequisite Software Install Apache, PHP, and other required libraries**
 
-   yum install httpd php gcc glibc glibc-common gd gd-devel -y
+    yum install httpd php gcc glibc glibc-common gd gd-devel -y
 
 3. **Create account information, you need to setup a Nagios user**
 
-   adduser -m nagios
+    adduser -m nagios
    
-   passwd nagios
+    passwd nagios
 
   *Now it will ask to enter new password and provide any*
 
    **Now to add group enter these commands**
 
-   groupadd nagioscmd
+    groupadd nagioscmd
    
-   usermod -a -G nagioscmd nagios
+    usermod -a -G nagioscmd nagios
    
-   usermod -a -G nagioscmd apache
+    usermod -a -G nagioscmd apache
 
 4. **Download and Install Nagios Core and plugins, now create directories to store the downloaded files**
   
-   mkdir ~/downloads
+    mkdir ~/downloads
    
-   cd ~/downloads    
+    cd ~/downloads    
 
 5. **Download the source code tarballs of both nagios and the plugins**
 
-   wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.6.tar.gz
+    wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.6.tar.gz
    
-   wget https://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz 
+    wget https://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz 
      
 6. **Extract the nagios source code tarball and install**
 
-   tar -zxvf nagios-4.4.6.tar.gz
+    tar -zxvf nagios-4.4.6.tar.gz
    
-   cd nagios-4.4.6
+    cd nagios-4.4.6
    
 7. **Run the configuration script with the name of the group which you have created in above step**
 
-        ./configure --with-command-group=nagioscmd
+    ./configure --with-command-group=nagioscmd
 
 8. **Install binaries, init script, sample config files and set permission on the external command directly**
 
-   make all
+    make all
    
-   make install
+    make install
    
-   make install-init
+    make install-init
    
-   make install-config
+    make install-config
    
-   make install-commandmode
+    make install-commandmode
 
 9. **---Optional--- You can customize the configuration (e.g. email)**
 
-    vim /usr/local/nagios/etc/objects/contacts.cfg   
+     vim /usr/local/nagios/etc/objects/contacts.cfg   
 
 10. **Configure the web interface**
 
-    make install-webconf
+     make install-webconf
 
 11. **Create a `nagiosadmin` account for login into the nagios web interface & set password**
 
@@ -118,9 +118,9 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
           
  19. **You can now start NAGIOS**
 
-     service nagios start
+      service nagios start
      
-     service httpd restart
+      service httpd restart
      
  21. Now copy the public IP of your ec2 instance and paste the URL on your browser like this *( 12.1.1.1/nagios )*
 
