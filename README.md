@@ -130,7 +130,11 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
 
 
-
+<h3 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Alhamdulillah;Ashik+Ahammad...;&center=true&size=30">
+  </a>
+</h3>
 
 
 
