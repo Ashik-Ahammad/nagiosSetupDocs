@@ -27,7 +27,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
   *Now it will ask to enter new password and provide any*
 
-   **Now to add group enter these commands**
+   *Now to add group enter these commands*
 
     `groupadd nagioscmd`
    
