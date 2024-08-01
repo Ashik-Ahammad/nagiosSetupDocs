@@ -25,7 +25,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
    
     `passwd nagios`
 
-  *Now it will ask to enter new password and provide any*
+       *Now it will ask to enter new password and provide any*
 
  4. **Now to add group enter these commands**
 
@@ -77,7 +77,7 @@ This guide provides step-by-step instructions to install Nagios on an Amazon Lin
 
      `make install-webconf`
 
-12. **Create a `nagiosadmin` account for login into the nagios web interface & set password**
+12. **Create a *nagiosadmin* account for login into the nagios web interface & set password**
 
      `htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin`   
    
