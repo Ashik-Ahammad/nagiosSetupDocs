@@ -132,7 +132,7 @@ Nagios is a powerful open-source monitoring system that enables organizations to
 
 
 
-  ### Contributions are welcome! Feel free to fork this repository, make improvements, and submit pull requests. Your contributions will help others and enhance the quality of this guide. And if you find this helpful, sen me a star ⭐ on GitHub. Your support will be appreciated very much!!!
+  ##### Contributions are welcome! Feel free to fork this repository, make improvements, and submit pull requests. Your contributions will help others and enhance the quality of this guide. And if you find this helpful, send me a star ⭐ on GitHub. Your support will be appreciated very much!!!
 
 
 <h3 align="center">
